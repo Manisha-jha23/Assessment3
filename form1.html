@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Appointment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 80%;
+            height: auto;
+        }
+
+        .form-container {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-left: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+            border-bottom: 2px solid maroon;
+            padding-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"],
+        textarea {
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .row input {
+            width: 100%;
+        }
+
+        .checkbox-group {
+            margin-top: 10px;
+        }
+
+        .checkbox-group label {
+            font-weight: normal;
+        }
+
+        .gender-group {
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 8px 16px;
+            background-color: maroon;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-container">
+        <img src="doctor.jpeg" alt="Doctor Image" >
+    </div>
+    <div class="form-container">
+        <h2>Doctor Appointment Form</h2>
+        <form>
+            <label>Appointment Date</label>
+            <input type="date" name="appointment_date">
+
+            <label>Appointment Time</label>
+            <input type="time" name="appointment_time">
+
+            <label>Name</label>
+            <div class="row">
+                <input type="text" placeholder="First" name="first_name">
+                <input type="text" placeholder="Last" name="last_name">
+            </div>
+
+            <label>Gender</label>
+            <div class="gender-group">
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+            </div>
+
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="####">
+
+            <label>Address</label>
+            <div class="row">
+                <input type="text" placeholder="City" name="city">
+                <input type="text" placeholder="State" name="state">
+            </div>
+
+            <label>Your Query</label>
+            <textarea rows="3" name="query"></textarea>
+
+            <label>Appointment Type</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="checkup" value="cervix"> Cervix checkup</label><br>
+                <label><input type="checkbox" name="checkup" value="heart"> Heart check-up</label><br>
+                <label><input type="checkbox" name="checkup" value="eye"> Eye check-up</label><br>
+                <label><input type="checkbox" name="checkup" value="hearing"> Hearing Test</label>
+            </div>
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
